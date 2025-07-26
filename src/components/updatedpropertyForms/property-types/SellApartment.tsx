@@ -978,7 +978,7 @@ const SellApartment = () => {
         }
       };
 
-      const response = await axios.post('/api/residential/sale/apartment', transformedData, {
+      const response = await axios.post('https://backend-sgxi.onrender.com/api/residential/sale/apartment', transformedData, {
         headers: {
           'Content-Type': 'application/json'
         }

@@ -760,7 +760,7 @@ const RentOfficeSpace = () => {
 
         console.log("transformedData", transformedData);
 
-        const response = await axios.post('/api/commercial/rent/office-space', transformedData, {
+        const response = await axios.post('https://backend-sgxi.onrender.com/api/commercial/rent/office-space', transformedData, {
           headers: {
             'Content-Type': 'application/json'
           }

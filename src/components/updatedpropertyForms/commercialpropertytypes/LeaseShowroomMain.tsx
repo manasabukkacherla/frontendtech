@@ -608,7 +608,7 @@ const LeaseShowroomMain = () => {
           }
         };
 
-        const response = await axios.post('/api/commercial/lease/showrooms', transformedData, {
+        const response = await axios.post('https://backend-sgxi.onrender.com/api/commercial/lease/showrooms', transformedData, {
           headers: {
             'Content-Type': 'application/json'
           }

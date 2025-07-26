@@ -54,7 +54,7 @@ const Leads: React.FC<LeadsProps> = () => {
   const fetchLeads = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('/api/enquiry/enquiries');
+      const response = await axios.get('https://backend-sgxi.onrender.com/api/enquiry/enquiries');
       setLeads(response.data.data);
       setError(null);
     } catch (err: any) {

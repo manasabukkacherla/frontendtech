@@ -35,7 +35,7 @@ const Users = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('https://backend-sgxi.onrender.com/api/sign/users');
+        const response = await axios.get('api/sign/users');
         setUsers(
           Array.isArray(response.data)
             ? response.data

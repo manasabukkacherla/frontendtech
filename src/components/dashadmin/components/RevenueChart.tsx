@@ -33,7 +33,7 @@ const RevenueChart = () => {
   useEffect(() => {
     const fetchRevenueData = async () => {
       try {
-        const res = await axios.get('https://backend-sgxi.onrender.com/api/payment/revenue-by-date');
+        const res = await axios.get('api/payment/revenue-by-date');
         const data = res.data; // Example: [{ date: '2025-03-19', revenue: 1900 }, ...]
 
         // Group revenue by month

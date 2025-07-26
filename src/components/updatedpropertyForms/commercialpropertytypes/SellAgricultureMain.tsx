@@ -506,7 +506,7 @@ const SellAgricultureMain = () => {
           }
         };
 
-        const response = await axios.post('/api/commercial/sell/agriculture', transformedData, {
+        const response = await axios.post('https://backend-sgxi.onrender.com/api/commercial/sell/agriculture', transformedData, {
           headers: {
             'Content-Type': 'application/json'
           }

@@ -78,7 +78,7 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({ onClose, property }) =
         updatedAt: formData.updatedAt
       };
 
-      const response = await axios.post('/api/enquiry/submit', transformedData, {
+      const response = await axios.post('https://backend-sgxi.onrender.com/api/enquiry/submit', transformedData, {
         headers: {
           'Content-Type': 'application/json'
         }

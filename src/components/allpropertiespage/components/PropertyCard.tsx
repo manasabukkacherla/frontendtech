@@ -145,7 +145,7 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
   const handleEdit = async () => {
     console.log("Editing property:", property.propertyId);
     try {
-      const response = await axios.put(`/api/${category}/${listing}/${type}/${property.propertyId}`);
+      const response = await axios.put(`https://backend-sgxi.onrender.com/api/${category}/${listing}/${type}/${property.propertyId}`);
         console.log(response);
         if (response.data.success) {
           console.log("Property edited successfully");

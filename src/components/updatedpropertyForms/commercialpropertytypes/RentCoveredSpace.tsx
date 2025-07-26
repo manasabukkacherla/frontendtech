@@ -989,7 +989,7 @@ const RentCoveredSpace = () => {
         // Send the data to the backend
         const token = JSON.parse(user).token;
         const response = await axios.post(
-          `/api/commercial/rent/covered-space`,
+          `https://backend-sgxi.onrender.com/api/commercial/rent/covered-space`,
           transformedData,
           {
             headers: {
