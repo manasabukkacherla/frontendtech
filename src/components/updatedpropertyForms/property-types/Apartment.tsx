@@ -1025,7 +1025,7 @@ const Apartment = () => {
           }
         };
 
-        const response = await axios.post('/api/residential/rent/apartment', transformedData, {
+        const response = await axios.post('https://backend-sgxi.onrender.com/api/residential/rent/apartment', transformedData, {
           headers: {
             'Content-Type': 'application/json'
           }

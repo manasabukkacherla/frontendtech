@@ -17,7 +17,7 @@ function Plans() {
   const fetchSubscriptionPlans = async () => {
     setLoading(true);
     try {
-      const response = await fetch("/api/subscription");
+      const response = await fetch("https://backend-sgxi.onrender.com/api/subscription");
       if (!response.ok) throw new Error("Failed to fetch subscription plans");
       const data = await response.json();
       setSubscriptionPlans(data);
@@ -46,7 +46,7 @@ function Plans() {
   const fetchTokenPackages = async () => {
     setLoading(true);
     try {
-      const response = await fetch("/api/tokens");
+      const response = await fetch("https://backend-sgxi.onrender.com/api/tokens");
       if (!response.ok) throw new Error("Failed to fetch token packages");
       const data = await response.json();
       setTokenPackages(data);
@@ -95,11 +95,11 @@ function Plans() {
     try {
       let selectedItem;
       if (type === "subscription") {
-        const response = await fetch(`/api/subscription/${id}`);
+        const response = await fetch(`https://backend-sgxi.onrender.com/api/subscription/${id}`);
         if (!response.ok) throw new Error("Failed to fetch subscription plan");
         selectedItem = await response.json();
       } else if (type === "token") {
-        const response = await fetch(`/api/tokens/${id}`);
+        const response = await fetch(`https://backend-sgxi.onrender.com/api/tokens/${id}`);
         if (!response.ok) throw new Error("Failed to fetch token package");
         selectedItem = await response.json();
       }
@@ -122,7 +122,7 @@ function Plans() {
       }
 
       // Create an order with Razorpay
-      const orderResponse = await fetch("/api/payment/create-order", {
+      const orderResponse = await fetch("https://backend-sgxi.onrender.com/api/payment/create-order", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -162,7 +162,7 @@ function Plans() {
           };
 
           // Save payment details to your backend
-          const saveResponse = await fetch("/api/payment/save-payment", {
+          const saveResponse = await fetch("https://backend-sgxi.onrender.com/api/payment/save-payment", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

@@ -470,7 +470,7 @@ const LeaseAgricultureMain = () => {
 
         };
 
-        const response = await axios.post('/api/commercial/lease/agriculture', transformedData, {
+        const response = await axios.post('https://backend-sgxi.onrender.com/api/commercial/lease/agriculture', transformedData, {
           headers: {
             'Content-Type': 'application/json'
           }

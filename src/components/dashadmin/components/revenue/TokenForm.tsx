@@ -47,7 +47,7 @@ const TokenForm: React.FC<TokenFormProps> = ({
   // Fetch token details when editing
   useEffect(() => {
     if (tokenId) {
-      fetch(`/api/tokens/${tokenId}`)
+      fetch(`https://backend-sgxi.onrender.com/api/tokens/${tokenId}`)
         .then((res) => res.json())
         .then((data) => setFormData(data))
         .catch(() => showToast.error("Error fetching token details"));
@@ -77,8 +77,8 @@ const TokenForm: React.FC<TokenFormProps> = ({
     try {
       const isEdit = !!(formData._id || tokenId);
       const url = isEdit
-        ? `/api/tokens/${formData._id || tokenId}`
-        : "/api/tokens";
+        ? `https://backend-sgxi.onrender.com/api/tokens/${formData._id || tokenId}`
+        : "https://backend-sgxi.onrender.com/api/tokens";
 
       const method = isEdit ? "PUT" : "POST";
 

@@ -12,7 +12,7 @@ function Dashboard() {
       return;
     }
 
-    fetch("/api/auth/me", {
+    fetch("https://backend-sgxi.onrender.com/api/auth/me", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())

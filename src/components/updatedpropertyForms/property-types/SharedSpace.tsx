@@ -790,7 +790,7 @@ const SharedSpace = ({ propertyId: initialPropertyId, onSubmit }: SharedSpacePro
       };
 
       const response = await axios.post(
-        "/api/residential/rent/shared-space",
+        "https://backend-sgxi.onrender.com/api/residential/rent/shared-space",
         transformedData,
         {
           headers: {

@@ -30,7 +30,7 @@ export default function Properties() {
   useEffect(() => {
     const fetchProperties = async () => {
       try {
-        const response = await axios.get('/api/allproperties/all');
+        const response = await axios.get('https://backend-sgxi.onrender.com/api/allproperties/all');
         const data = response.data;
         
         // Extract properties from all sections

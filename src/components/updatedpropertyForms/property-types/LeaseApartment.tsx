@@ -844,7 +844,7 @@ const LeaseApartment: React.FC = () => {
         }
       };
 
-      const response = await axios.post('/api/residential/lease/apartment', transformedData, {
+      const response = await axios.post('https://backend-sgxi.onrender.com/api/residential/lease/apartment', transformedData, {
         headers: {
           'Content-Type': 'application/json'
         }

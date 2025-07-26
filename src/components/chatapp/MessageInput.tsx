@@ -65,7 +65,7 @@ const MessageInput: React.FC<MessageInputProps> = ({ onSend, onTyping }) => {
   useEffect(() => {
     const fetchConversations = async () => {
       try {
-        const response = await fetch("/api/message", {
+        const response = await fetch("https://backend-sgxi.onrender.com/api/message", {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         });

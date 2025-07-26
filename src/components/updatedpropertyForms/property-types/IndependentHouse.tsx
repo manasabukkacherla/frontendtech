@@ -747,7 +747,7 @@ const IndependentHouse: React.FC<IndependentHouseProps> = ({ propertyId: initial
         }
       };
 
-      const response = await axios.post('/api/residential/rent/independenthouse', transformedData, {
+      const response = await axios.post('https://backend-sgxi.onrender.com/api/residential/rent/independenthouse', transformedData, {
         headers: {
           'Content-Type': 'application/json'
         }

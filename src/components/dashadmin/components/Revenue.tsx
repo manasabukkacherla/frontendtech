@@ -103,7 +103,7 @@ const Revenue = () => {
   // Update the handleSubmitPlan function to refetch plans after submission
   const handleSubmitPlan = async () => {
     try {
-      const response = await fetch("/api/subscription", {
+      const response = await fetch("https://backend-sgxi.onrender.com/api/subscription", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -130,7 +130,7 @@ const Revenue = () => {
     }
 
     try {
-      const response = await fetch(`/api/subscription/${updatedPlan.id}`, {
+      const response = await fetch(`https://backend-sgxi.onrender.com/api/subscription/${updatedPlan.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -176,7 +176,7 @@ const Revenue = () => {
 
     try {
       showToast.info("Deleting subscription plan...");
-      const response = await fetch(`/api/subscription/${id}`, {
+      const response = await fetch(`https://backend-sgxi.onrender.com/api/subscription/${id}`, {
         method: "DELETE",
       });
 

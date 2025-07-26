@@ -43,7 +43,7 @@ function Allproperties() {
   useEffect(() => {
     const fetchAllProperties = async () => {
       try {
-        const response = await axios.get('/api/allproperties/all');
+        const response = await axios.get('https://backend-sgxi.onrender.com/api/allproperties/all');
         // console.log("response", response);
         const grouped = response.data?.data || {};
 
